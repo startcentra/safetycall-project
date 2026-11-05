@@ -7,7 +7,7 @@
   "language": "en-US",
   "durationSeconds": 105.261,
   "sha256": "61ac5a26b6a7c4d6e27117d2a0799e6e94e8a93be9570190e85ba8e0d2b6ddeb",
-  "createdAt": "2026-11-04T15:15:46.983Z",
+  "createdAt": "2026-11-05T01:06:10.118Z",
   "generator": "scripts/generate-tts-audio.mjs",
   "voice": "eSpeak offline en-US",
   "rights": "Fictional original script, generated locally using operating-system TTS. Verify voice engine redistribution terms if distributing.",
