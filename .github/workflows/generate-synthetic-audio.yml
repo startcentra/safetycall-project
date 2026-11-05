@@ -1,0 +1,60 @@
+name: Generate synthetic SafeCall audio assets
+
+on:
+  push:
+    paths:
+      - '.github/workflows/generate-synthetic-audio.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  synthesize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install offline speech tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y espeak ffmpeg
+      - name: Generate fictional English WAV recordings
+        env:
+          META_LIVE_ENABLED: 'false'
+          META_VOICE_LIVE_ENABLED: 'false'
+          SAFECALL_MEDIA_ASR_ENABLED: 'false'
+        run: |
+          node scripts/generate-tts-audio.mjs
+      - name: Verify generated media
+        run: |
+          python3 - <<'PY'
+          import wave, pathlib
+          expected = [
+              "synthetic-prosecutor-en",
+              "synthetic-delivery-en",
+              "training-bank-20-en",
+              "training-delivery-20-en",
+          ]
+          root = pathlib.Path("demo/safety-challenge/media")
+          for name in expected:
+              p = root / f"{name}.wav"
+              with wave.open(str(p)) as w:
+                  assert w.getnchannels() == 1
+                  assert w.getframerate() == 24000
+                  assert w.getsampwidth() == 2
+                  assert w.getnframes() > 24000
+              assert (root / f"{name}.manifest.json").exists()
+              print("Verified synthetic audio", name)
+          PY
+      - name: Commit synthesized WAV and matching manifests
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add demo/safety-challenge/media/*.wav demo/safety-challenge/media/*.manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: generate four fictional TTS WAV recordings [skip ci]"
+            git push origin HEAD:main
+          fi
