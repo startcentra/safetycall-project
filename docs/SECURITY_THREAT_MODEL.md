@@ -1,31 +1,35 @@
-# Security Threat Model — SafeCall v0.6.2
+# SafeCall — Public Security and Privacy Summary
 
-## 다루는 자산
-- 사용자 동의가 있는 가상 WAV 및 ASR 전사
-- Meta API 키, 로컬 접근 코드 및 세션 서명키
-- $150 참조 크레딧에 대해 별도 승인된 **최대 $5 초기** 앱 지출 한도
-- 거래보류·코칭 상태
+SafeCall is a **local-first hackathon prototype**. This overview describes the protection boundaries and important remaining risks. It is not a production security certification or a claim that all vulnerabilities have been eliminated.
 
-## 경계 및 완화
+## Assets and trust boundaries
 
-| 위협 | 완화책 | 남은 위험 |
-| --- | --- | --- |
-| 외부 사이트의 로컬 LIVE API 호출 | 동일 localhost Origin/Host 검증 + 강한 로컬 접근 코드 + VOICE 서명 티켓 | 로컬 PC를 완전히 장악한 공격자는 방어 범위 밖. 공유 호스팅 불가 |
-| WebSocket 티켓 복제 | HMAC 검증·60초 만료·VOICE 범위·실행 중 nonce 재사용 차단 | 서버 재시작 후 남은 짧은 티켓 만료 전까지 replay 가능; 서버측 잔여 사용량 제한 추가 필요 |
-| 동의 철회 후 전송 | 브라우저 송신 타이머 정지, `revoke`, WebSocket 종료 | 이미 전송된 프레임/원격 처리는 소급 취소 불가 |
-| 음성 내용에 포함된 공격 지시 | 모델 입력은 비신뢰 데이터; 응답 검증·허용 행동코드·정책 경유 | 모델 인식 오류/환각 가능성 지속 |
-| ASR speaker 오인 | 기본 `unknown`, 확인된 단일 상대방 소스일 때만 수동 매핑 | 화자 라벨은 신원 인증이 아니며 두 명 이상 발언 혼합 시 분석 보류 |
-| 비용 손실/이중 사용 | 원자적 파일 lock, 예약 시 예산 상한, 불확실 지출 별도 liability | 단일 호스트 전제, 외부 Playground 및 계정 전체 과금 미포함 |
-| 장부 손상/잠김 | 차단(fail-closed), 원문 API 키 및 통화 저장 안 함 | 잠금 파일 수동 복구가 필요할 수 있음 |
-| 오래된 분석 응답 | 컴포넌트 세대 번호 + fetch AbortSignal | 서버 모델 호출을 전부 취소한다는 보장은 없음 |
-| 긴 발화 위험 누락 | 로컬 중첩 검사, Meta 입력 초과 시 명시적 미분석 상태 | 최근 8개 발화 이외의 장기 맥락은 여전히 미해결 |
+- Server-side credentials for optional Meta API requests must remain outside the repository.
+- Synthetic scenario data and authorized test media are not real customer phone recordings.
+- Speech transcripts and model outputs are untrusted evidence; neither should be treated as verified caller identity.
+- Mock banking, phone and smart-glasses interfaces must not be mistaken for real external integrations.
 
-## 배포 제한
-`0.0.0.0`에 게이트웨이 바인딩 금지. 이 버전의 접근 코드는 계정 로그인 대체 불가. 실제 은행 계좌·통화와 연결 금지. 데이터 보존/법률·규제·AI 평가가 끝나기 전 공개 서비스 배포 금지.
+## Safeguards implemented in the prototype
 
-## v0.6.4 추가 보안 경계
+- Local demo host restrictions and session/role tokens for demo actions.
+- Request-size validation, limited accepted operations and simulated rather than real financial side effects.
+- Consent and configuration gates before optional external model/audio requests.
+- Bounded model request and cost-handling logic; estimates are not actual billing statements.
+- An optional, user-managed encrypted recovery checklist; this is not full account or call recovery.
 
-- Spark 인증: 같은 출처인 로컬 브라우저, 별도 24자 이상 접근 코드, 24자 이상 HMAC 서명 키, 발급된 제한 시간의 통화 티켓 필요. API 키 브라우저 노출 금지. 프로덕션 사용자 인증/분산 리플레이 방지는 아직 없음.
-- 요청 본문은 바이트 한도 내에서만 수신. UNKNOWN 화자는 상대방 신원으로 승격 금지. 명시적 정정은 이전 근거 철회를 요구.
-- 초과 정산 발견 시 비용 장부에 실제 알려진 사용량 보존하고 신규 LIVE 중단. 공급자 측 실사용 확인은 사람의 대조가 필요.
-- FULL 빌드/브라우저 검증을 수행하지 못했으므로 LIVE/외부 행동을 허용해서는 안 됨.
+## Residual risks and restrictions
+
+- The local access mechanisms do **not** replace a production user identity and authorization system.
+- Transcript errors, model errors, false alarms and missed scams remain possible.
+- A client disconnect or consent withdrawal cannot undo a request already processed by an external provider.
+- Cost controls within one application cannot guarantee limits on external provider billing or use by other apps.
+- Optional external maps and model services may receive network/device information under their own policies.
+- Actual financial and telecom actions, distributed hosting, security monitoring, privacy review and end-to-end device validation are outside the verified prototype scope.
+
+## Public source audit snapshot (November 2026)
+
+Manual repository review and user-run scans did not identify a real committed Meta API key. A user-run Gitleaks scan reported **18 commits scanned, no leaks found**; npm audit reported **0 known vulnerabilities**; Secretlint identified **three synthetic BasicAuth test fixtures**. These results are bounded observations, not proof of zero risk. The historical commit count is not identical to the Gitleaks scan count.
+
+## Responsible use
+
+Use fictional or authorized test data only. Store credentials in private server-side secrets. Do not publish genuine calls, banking details, private logs, or participant data. Do not deploy this prototype as a public fraud-prevention or financial-control service without appropriate security, legal, licensing, privacy and effectiveness reviews.
