@@ -1,0 +1,109 @@
+{
+  "id": "synthetic-delivery-en",
+  "kind": "SYNTHETIC_TTS",
+  "language": "en-US",
+  "durationSeconds": 66.193,
+  "sha256": "0b8c971a9cc2522003805a5def2d6c39249f3734ae334c77c944366a4f03aadc",
+  "createdAt": "2026-11-04T14:54:59.046Z",
+  "generator": "scripts/generate-tts-audio.mjs",
+  "voice": "eSpeak offline en-US",
+  "rights": "Fictional original script, generated locally using operating-system TTS. Verify voice engine redistribution terms if distributing.",
+  "gpsScheduleMs": [
+    12473,
+    18001,
+    23529,
+    29057,
+    34585,
+    40112,
+    45640,
+    51168,
+    56696
+  ],
+  "groundTruthNote": "Turn text and times are evaluation fixtures only; server never reads them for risk inference.",
+  "turns": [
+    {
+      "index": 0,
+      "role": "narrator",
+      "startMs": 650,
+      "endMs": 5831,
+      "text": "Synthetic security training call. This conversation is fictional."
+    },
+    {
+      "index": 1,
+      "role": "receiver",
+      "startMs": 6631,
+      "endMs": 7498,
+      "text": "Hello?"
+    },
+    {
+      "index": 2,
+      "role": "caller",
+      "startMs": 8348,
+      "endMs": 14549,
+      "text": "This is the registered mail delivery desk. A court letter addressed to you could not be delivered."
+    },
+    {
+      "index": 3,
+      "role": "receiver",
+      "startMs": 15399,
+      "endMs": 18044,
+      "text": "I did not expect any letter from a court."
+    },
+    {
+      "index": 4,
+      "role": "caller",
+      "startMs": 19044,
+      "endMs": 26375,
+      "text": "To confirm your identity, open the link we sent and enter your ID number and your verification code."
+    },
+    {
+      "index": 5,
+      "role": "receiver",
+      "startMs": 27425,
+      "endMs": 31060,
+      "text": "The page is asking me to install a security application."
+    },
+    {
+      "index": 6,
+      "role": "caller",
+      "startMs": 31960,
+      "endMs": 37429,
+      "text": "Please install the support app now. I will connect you with our investigator."
+    },
+    {
+      "index": 7,
+      "role": "investigator",
+      "startMs": 38409,
+      "endMs": 45991,
+      "text": "I am calling from the bank investigation team. Your account may be compromised. Do not tell your family."
+    },
+    {
+      "index": 8,
+      "role": "receiver",
+      "startMs": 46941,
+      "endMs": 49065,
+      "text": "What should I do with my savings?"
+    },
+    {
+      "index": 9,
+      "role": "investigator",
+      "startMs": 49965,
+      "endMs": 55796,
+      "text": "You must transfer the money to a protected account immediately. Go to your bank now."
+    },
+    {
+      "index": 10,
+      "role": "receiver",
+      "startMs": 56696,
+      "endMs": 59195,
+      "text": "I am standing outside the bank now."
+    },
+    {
+      "index": 11,
+      "role": "investigator",
+      "startMs": 59995,
+      "endMs": 64995,
+      "text": "Keep the call open. Do not tell the teller about this investigation."
+    }
+  ]
+}

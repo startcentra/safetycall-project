@@ -1,0 +1,168 @@
+{
+  "id": "training-delivery-20-en",
+  "scenarioSeed": 2084,
+  "turnLimit": 20,
+  "scenarioSource": "CURATED_SEEDED_FIXTURE",
+  "kind": "SYNTHETIC_TTS",
+  "language": "en-US",
+  "durationSeconds": 99.578,
+  "sha256": "7a4acac8265c5acc987a9dd03c665e1a9c2a14bdb974faedc908372eb68d6823",
+  "createdAt": "2026-11-04T15:15:48.855Z",
+  "generator": "scripts/generate-tts-audio.mjs",
+  "voice": "eSpeak offline en-US",
+  "rights": "Fictional original script, generated locally using operating-system TTS. Verify voice engine redistribution terms if distributing.",
+  "gpsScheduleMs": [
+    18717,
+    27012,
+    35307,
+    43602,
+    51897,
+    60191,
+    68486,
+    76781,
+    85076
+  ],
+  "groundTruthNote": "Turn text and times are evaluation fixtures only; server never reads them for risk inference.",
+  "turns": [
+    {
+      "index": 0,
+      "role": "caller",
+      "startMs": 650,
+      "endMs": 5759,
+      "text": "Hello, I am calling about a registered delivery that could not be completed."
+    },
+    {
+      "index": 1,
+      "role": "receiver",
+      "startMs": 6309,
+      "endMs": 10344,
+      "text": "I am expecting a package. Which delivery company is this?"
+    },
+    {
+      "index": 2,
+      "role": "caller",
+      "startMs": 10894,
+      "endMs": 16572,
+      "text": "The package contains a legal notice and requires identity confirmation today."
+    },
+    {
+      "index": 3,
+      "role": "receiver",
+      "startMs": 17122,
+      "endMs": 19897,
+      "text": "I did not know I had any legal notice coming."
+    },
+    {
+      "index": 4,
+      "role": "caller",
+      "startMs": 20447,
+      "endMs": 25453,
+      "text": "A verification link was sent to your phone to prevent a delivery penalty."
+    },
+    {
+      "index": 5,
+      "role": "receiver",
+      "startMs": 26003,
+      "endMs": 30062,
+      "text": "The link asks for personal information. Is that necessary?"
+    },
+    {
+      "index": 6,
+      "role": "caller",
+      "startMs": 30612,
+      "endMs": 35516,
+      "text": "You must enter your identity number and verification code immediately."
+    },
+    {
+      "index": 7,
+      "role": "receiver",
+      "startMs": 36066,
+      "endMs": 39260,
+      "text": "I would rather check through the official delivery website."
+    },
+    {
+      "index": 8,
+      "role": "caller",
+      "startMs": 39810,
+      "endMs": 45509,
+      "text": "Do not use other channels. An investigator will continue the process on this call."
+    },
+    {
+      "index": 9,
+      "role": "receiver",
+      "startMs": 46059,
+      "endMs": 48433,
+      "text": "I am worried this may not be legitimate."
+    },
+    {
+      "index": 10,
+      "role": "caller",
+      "startMs": 48983,
+      "endMs": 54997,
+      "text": "Your bank account could be involved in a fraud investigation. Do not tell your family."
+    },
+    {
+      "index": 11,
+      "role": "receiver",
+      "startMs": 55547,
+      "endMs": 58081,
+      "text": "What exactly are you asking me to do?"
+    },
+    {
+      "index": 12,
+      "role": "caller",
+      "startMs": 58631,
+      "endMs": 64760,
+      "text": "Transfer your savings to a protected account. It is the only way to keep them safe."
+    },
+    {
+      "index": 13,
+      "role": "receiver",
+      "startMs": 65310,
+      "endMs": 68796,
+      "text": "You want me to send money? That sounds unusual."
+    },
+    {
+      "index": 14,
+      "role": "caller",
+      "startMs": 69346,
+      "endMs": 74186,
+      "text": "The deadline is in minutes. Go to your bank while we stay on this call."
+    },
+    {
+      "index": 15,
+      "role": "receiver",
+      "startMs": 74736,
+      "endMs": 78433,
+      "text": "I am walking to the bank now, but I still have doubts."
+    },
+    {
+      "index": 16,
+      "role": "caller",
+      "startMs": 78983,
+      "endMs": 84526,
+      "text": "Do not explain the investigation to bank employees. They are not authorized."
+    },
+    {
+      "index": 17,
+      "role": "receiver",
+      "startMs": 85076,
+      "endMs": 88292,
+      "text": "I am near the bank and I can see the cash machines."
+    },
+    {
+      "index": 18,
+      "role": "caller",
+      "startMs": 88842,
+      "endMs": 93271,
+      "text": "Make the transfer immediately and keep the transaction secret."
+    },
+    {
+      "index": 19,
+      "role": "receiver",
+      "startMs": 93821,
+      "endMs": 98682,
+      "text": "I will stop the transfer and contact the official bank fraud team instead."
+    }
+  ]
+}

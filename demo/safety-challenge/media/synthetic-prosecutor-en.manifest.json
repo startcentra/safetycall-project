@@ -1,0 +1,102 @@
+{
+  "id": "synthetic-prosecutor-en",
+  "kind": "SYNTHETIC_TTS",
+  "language": "en-US",
+  "durationSeconds": 58.585,
+  "sha256": "2dbdfd99d20ab1dbac6865989f92e7e3d7d58845f9a210245d4c323fc34da6bd",
+  "createdAt": "2026-11-04T14:54:57.663Z",
+  "generator": "scripts/generate-tts-audio.mjs",
+  "voice": "eSpeak offline en-US",
+  "rights": "Fictional original script, generated locally using operating-system TTS. Verify voice engine redistribution terms if distributing.",
+  "gpsScheduleMs": [
+    11086,
+    15999,
+    20912,
+    25825,
+    30739,
+    35652,
+    40565,
+    45478,
+    50391
+  ],
+  "groundTruthNote": "Turn text and times are evaluation fixtures only; server never reads them for risk inference.",
+  "turns": [
+    {
+      "index": 0,
+      "role": "narrator",
+      "startMs": 650,
+      "endMs": 5831,
+      "text": "Synthetic security training call. This conversation is fictional."
+    },
+    {
+      "index": 1,
+      "role": "receiver",
+      "startMs": 6681,
+      "endMs": 8649,
+      "text": "Hello? Who is this?"
+    },
+    {
+      "index": 2,
+      "role": "caller",
+      "startMs": 9549,
+      "endMs": 17169,
+      "text": "I am calling from the federal investigation office. We are reviewing a financial crime linked to your bank account."
+    },
+    {
+      "index": 3,
+      "role": "receiver",
+      "startMs": 18169,
+      "endMs": 21315,
+      "text": "A financial crime? I do not understand."
+    },
+    {
+      "index": 4,
+      "role": "caller",
+      "startMs": 22265,
+      "endMs": 29023,
+      "text": "Do not tell anyone, not even your family or your bank. The investigation is confidential."
+    },
+    {
+      "index": 5,
+      "role": "receiver",
+      "startMs": 30003,
+      "endMs": 31332,
+      "text": "What should I do?"
+    },
+    {
+      "index": 6,
+      "role": "caller",
+      "startMs": 32432,
+      "endMs": 39681,
+      "text": "You must transfer the money to the secure holding account immediately. You need to go to your bank right now."
+    },
+    {
+      "index": 7,
+      "role": "receiver",
+      "startMs": 40681,
+      "endMs": 42507,
+      "text": "I am on my way to the bank."
+    },
+    {
+      "index": 8,
+      "role": "caller",
+      "startMs": 43357,
+      "endMs": 49411,
+      "text": "Do not hang up. If the bank staff ask, tell them it is for personal expenses."
+    },
+    {
+      "index": 9,
+      "role": "receiver",
+      "startMs": 50391,
+      "endMs": 52890,
+      "text": "I am standing outside the bank now."
+    },
+    {
+      "index": 10,
+      "role": "caller",
+      "startMs": 53690,
+      "endMs": 57385,
+      "text": "Send the money now. You have to act immediately."
+    }
+  ]
+}

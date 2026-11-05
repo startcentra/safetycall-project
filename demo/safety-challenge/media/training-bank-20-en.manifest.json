@@ -1,0 +1,168 @@
+{
+  "id": "training-bank-20-en",
+  "scenarioSeed": 1042,
+  "turnLimit": 20,
+  "scenarioSource": "CURATED_SEEDED_FIXTURE",
+  "kind": "SYNTHETIC_TTS",
+  "language": "en-US",
+  "durationSeconds": 105.261,
+  "sha256": "61ac5a26b6a7c4d6e27117d2a0799e6e94e8a93be9570190e85ba8e0d2b6ddeb",
+  "createdAt": "2026-11-04T15:15:46.983Z",
+  "generator": "scripts/generate-tts-audio.mjs",
+  "voice": "eSpeak offline en-US",
+  "rights": "Fictional original script, generated locally using operating-system TTS. Verify voice engine redistribution terms if distributing.",
+  "gpsScheduleMs": [
+    17646,
+    25467,
+    33287,
+    41108,
+    48928,
+    56749,
+    64569,
+    72390,
+    80210
+  ],
+  "groundTruthNote": "Turn text and times are evaluation fixtures only; server never reads them for risk inference.",
+  "turns": [
+    {
+      "index": 0,
+      "role": "caller",
+      "startMs": 650,
+      "endMs": 6679,
+      "text": "Hello, this is the fraud investigation desk. May I speak with the account holder?"
+    },
+    {
+      "index": 1,
+      "role": "receiver",
+      "startMs": 7229,
+      "endMs": 11577,
+      "text": "Hello. Yes, I am the account holder. What happened?"
+    },
+    {
+      "index": 2,
+      "role": "caller",
+      "startMs": 12127,
+      "endMs": 17258,
+      "text": "We noticed a suspicious transaction associated with your account earlier today."
+    },
+    {
+      "index": 3,
+      "role": "receiver",
+      "startMs": 17808,
+      "endMs": 22091,
+      "text": "That sounds concerning. I did not authorize a new transaction."
+    },
+    {
+      "index": 4,
+      "role": "caller",
+      "startMs": 22641,
+      "endMs": 27813,
+      "text": "I am an investigator assigned to the case. This is a confidential review."
+    },
+    {
+      "index": 5,
+      "role": "receiver",
+      "startMs": 28363,
+      "endMs": 32273,
+      "text": "Can I call my bank using the number on my card to confirm?"
+    },
+    {
+      "index": 6,
+      "role": "caller",
+      "startMs": 32823,
+      "endMs": 39477,
+      "text": "No. Do not tell your family or anyone at the bank. Keep this call confidential."
+    },
+    {
+      "index": 7,
+      "role": "receiver",
+      "startMs": 40027,
+      "endMs": 42495,
+      "text": "I need to know how to protect my money."
+    },
+    {
+      "index": 8,
+      "role": "caller",
+      "startMs": 43045,
+      "endMs": 49534,
+      "text": "The investigation office has instructed you to transfer your savings to a secure holding account."
+    },
+    {
+      "index": 9,
+      "role": "receiver",
+      "startMs": 50084,
+      "endMs": 53778,
+      "text": "Are you asking me to transfer all of my money to another account?"
+    },
+    {
+      "index": 10,
+      "role": "caller",
+      "startMs": 54328,
+      "endMs": 60513,
+      "text": "Yes, immediately. The deadline is today and there is no time to verify separately."
+    },
+    {
+      "index": 11,
+      "role": "receiver",
+      "startMs": 61063,
+      "endMs": 64342,
+      "text": "I am not comfortable doing that without confirmation."
+    },
+    {
+      "index": 12,
+      "role": "caller",
+      "startMs": 64892,
+      "endMs": 69442,
+      "text": "Go to your bank right now. Stay on the line while you travel."
+    },
+    {
+      "index": 13,
+      "role": "receiver",
+      "startMs": 69992,
+      "endMs": 73585,
+      "text": "I am walking toward the bank and I can see the entrance."
+    },
+    {
+      "index": 14,
+      "role": "caller",
+      "startMs": 74135,
+      "endMs": 79660,
+      "text": "Do not discuss this investigation with the teller. Say it is a personal transfer."
+    },
+    {
+      "index": 15,
+      "role": "receiver",
+      "startMs": 80210,
+      "endMs": 83995,
+      "text": "I am near the bank. What if I speak with a bank employee?"
+    },
+    {
+      "index": 16,
+      "role": "caller",
+      "startMs": 84545,
+      "endMs": 88852,
+      "text": "You must follow my instructions or your account could be frozen."
+    },
+    {
+      "index": 17,
+      "role": "receiver",
+      "startMs": 89402,
+      "endMs": 93541,
+      "text": "I am at the bank entrance and I have opened my banking application."
+    },
+    {
+      "index": 18,
+      "role": "caller",
+      "startMs": 94091,
+      "endMs": 99114,
+      "text": "Send the money now. Make the transfer to the safe account immediately."
+    },
+    {
+      "index": 19,
+      "role": "receiver",
+      "startMs": 99664,
+      "endMs": 104361,
+      "text": "I will stop and independently verify through my bank official phone number."
+    }
+  ]
+}

@@ -1,29 +1,32 @@
-# Secrets and environment variables
+# Keep secrets and generated files out of PUBLIC GitHub history
 .env
 .env.*
 !.env.example
 *.pem
 *.key
-meta.env
-.safecall-private/
-.safecall/
-
-# Dependencies and generated application output
 node_modules/
 .next/
 .vercel/
 out/
 coverage/
 *.tsbuildinfo
+.DS_Store
+npm-debug.log*
 
-# Recording, evidence, logs and potentially sensitive transcripts
+# Persistent local budget ledger / real voice content
+.safecall-private/
+.env.local
+meta.env
+.safecall/
+
+# Local demo recordings. Do not publish or upload.
+artifacts/recordings/
+artifacts/meta-budget/
+
+# Submission-safe exclusions (local logs, reports, recordings)
 artifacts/
 validation-logs/
 *.mp4
 *.webm
 *.log
-
-# Local editor state
 .cursor/
-.DS_Store
-npm-debug.log*
