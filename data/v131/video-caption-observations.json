@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "provenance": "SYNTHETIC_LEGACY_CAPTION_FIXTURE_NOT_STT",
+  "description": "Completely fictional synthetic Korean test turns preserving legacy checkpoint timings; not real media captions, not STT, no real names or URLs.",
+  "cases": [
+    {
+      "id": "registered-mail",
+      "durationMs": 168866,
+      "observations": [
+        {
+          "observedAtMs": 10000,
+          "speaker": "caller",
+          "text": "안녕하세요. 배송 일정에 대한 확인 안내입니다."
+        },
+        {
+          "observedAtMs": 20000,
+          "speaker": "caller",
+          "text": "가상의 발송 건에 대해 통화 가능하신가요?"
+        },
+        {
+          "observedAtMs": 30000,
+          "speaker": "caller",
+          "text": "다음 주에 물품이 도착할 예정입니다."
+        },
+        {
+          "observedAtMs": 40000,
+          "speaker": "caller",
+          "text": "수령 장소에 계실 예정인지 확인합니다."
+        },
+        {
+          "observedAtMs": 50000,
+          "speaker": "caller",
+          "text": "웹사이트를 사용하고 계신가요?"
+        },
+        {
+          "observedAtMs": 60000,
+          "speaker": "caller",
+          "text": "인터넷 주소창에 사이트 이름을 입력해서 조회하세요."
+        },
+        {
+          "observedAtMs": 70000,
+          "speaker": "caller",
+          "text": "페이지에 배송 확인 메뉴가 나타날 겁니다."
+        },
+        {
+          "observedAtMs": 80000,
+          "speaker": "caller",
+          "text": "화면에 보이는 확인 버튼을 살펴보세요."
+        },
+        {
+          "observedAtMs": 90000,
+          "speaker": "caller",
+          "text": "공식 기관인지 확인하기 전에 링크를 누르지 마세요."
+        },
+        {
+          "observedAtMs": 100000,
+          "speaker": "caller",
+          "text": "확인이 어려우면 고객센터로 다시 연락하세요."
+        }
+      ]
+    },
+    {
+      "id": "prosecutor-personal-data",
+      "durationMs": 313733,
+      "observations": [
+        {
+          "observedAtMs": 10000,
+          "speaker": "user",
+          "text": "네, 지금 잠깐 통화할 수 있습니다."
+        },
+        {
+          "observedAtMs": 20000,
+          "speaker": "caller",
+          "text": "알겠습니다. 통화가 가능한 곳에 계신가요?"
+        },
+        {
+          "observedAtMs": 30000,
+          "speaker": "caller",
+          "text": "개인정보는 통화 중 제공하지 않는 것이 안전합니다."
+        },
+        {
+          "observedAtMs": 40000,
+          "speaker": "caller",
+          "text": "먼저 안내드릴 일반적인 절차를 설명하겠습니다."
+        },
+        {
+          "observedAtMs": 50000,
+          "speaker": "caller",
+          "text": "아직 별도의 요청을 진행하지 않았습니다."
+        },
+        {
+          "observedAtMs": 60000,
+          "speaker": "caller",
+          "text": "저는 가상의 수사관이라고 주장하고 있습니다."
+        },
+        {
+          "observedAtMs": 70000,
+          "speaker": "caller",
+          "text": "이 상황은 실제 기관과 무관한 합성 테스트입니다."
+        },
+        {
+          "observedAtMs": 80000,
+          "speaker": "caller",
+          "text": "본인 명의 계좌가 범죄에 연루되었다고 주장합니다."
+        },
+        {
+          "observedAtMs": 90000,
+          "speaker": "caller",
+          "text": "사건을 확인하기 전에 당장 이체하지 마세요."
+        },
+        {
+          "observedAtMs": 100000,
+          "speaker": "caller",
+          "text": "다른 사람의 계좌를 이야기하며 확인을 요구합니다."
+        },
+        {
+          "observedAtMs": 110000,
+          "speaker": "caller",
+          "text": "신원을 확인하기 전에는 개인정보를 제공하지 마세요."
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "id": "normal-shipping",
+      "speaker": "caller",
+      "text": "안녕하세요 등기배송 관련 안내입니다. 공식 배송 조회로 확인하실 수 있습니다."
+    },
+    {
+      "id": "normal-investigation",
+      "speaker": "caller",
+      "text": "검찰에서 발표한 보도자료를 읽어드리겠습니다. 개인정보를 알려주지 마세요."
+    },
+    {
+      "id": "education-quoted-website",
+      "speaker": "caller",
+      "text": "보이스피싱 교육 영상에서는 인터넷 주소창에 사이트를 입력하라고 하지만 그 말을 따르면 안 됩니다."
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "version": "v138",
+  "syntheticOnly": true,
+  "method": "Public safety advisories consulted, synthetic text authored after code freeze; first evaluation is not reused for tuning",
+  "caveat": "Not independently labeled real calls",
+  "cases": [
+    {
+      "id": "txt_pub_qr_ticket",
+      "name": "qr ticket",
+      "category": "FRAUD_PATTERN",
+      "sourceId": "https://consumer.ftc.gov/consumer-alerts/2026/04/text-about-traffic-violation-probably-scam",
+      "pattern": "qr_traffic_ticket",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "가상 교통위반 재판 통지입니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "오늘 QR을 스캔해서 벌금을 결제하지 않으면 법적 조치가 진행됩니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    },
+    {
+      "id": "txt_pub_qr_ticket_card",
+      "name": "qr ticket card",
+      "category": "FRAUD_PATTERN",
+      "sourceId": "https://consumer.ftc.gov/consumer-alerts/2026/04/text-about-traffic-violation-probably-scam",
+      "pattern": "qr_ticket_card",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "주차 위반 사건 접수 통보입니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "사진 속 QR로 연결된 납부 화면에 카드 정보를 기입하세요.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    },
+    {
+      "id": "txt_pub_wedding_app",
+      "name": "wedding app",
+      "category": "FRAUD_PATTERN",
+      "sourceId": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=71675",
+      "pattern": "wedding_app_install",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "지인의 결혼식 초대장이 도착했습니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "청첩장 확인 앱을 설치하고 열어주세요.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    },
+    {
+      "id": "txt_pub_friend_phone_change",
+      "name": "friend phone change",
+      "category": "FRAUD_PATTERN",
+      "sourceId": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=71675",
+      "pattern": "social_wedding_install",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "제가 저장된 연락처의 지인입니다. 결혼식에 초대해요.",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "일정이 안 보이면 받은 파일의 앱을 설치해 주세요.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    },
+    {
+      "id": "txt_pub_oauth_consent",
+      "name": "oauth consent",
+      "category": "FRAUD_PATTERN",
+      "sourceId": "https://www.ic3.gov/PSA/2026/PSA260901",
+      "pattern": "oauth_permission_phishing",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "정부 행사 파일을 공유했습니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "파일을 보려면 연결된 앱에 이메일 읽기 권한을 승인해야 해요.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    },
+    {
+      "id": "txt_pub_investment_ad",
+      "name": "investment ad",
+      "category": "FRAUD_PATTERN",
+      "sourceId": "https://consumer.ftc.gov/consumer-alerts/2026/05/how-are-scammers-trying-reach-you",
+      "pattern": "social_job_deposit",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "SNS에서 좋은 부업을 모집하고 있습니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "작업 수익을 찾으려면 결제 보증금을 먼저 보내주세요.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    },
+    {
+      "id": "txt_pub_bank_move_assets",
+      "name": "bank move assets",
+      "category": "FRAUD_PATTERN",
+      "sourceId": "https://consumer.ftc.gov/consumer-alerts/2026/05/how-are-scammers-trying-reach-you",
+      "pattern": "bank_impersonation",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "은행 계좌 이상 거래를 조사하고 있습니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "당장 다른 은행으로 돈을 옮겨 안전 보관하세요.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    },
+    {
+      "id": "txt_pub_qr_real_parking",
+      "name": "qr real parking",
+      "category": "NORMAL",
+      "sourceId": "https://consumer.ftc.gov/consumer-alerts/2026/04/text-about-traffic-violation-probably-scam",
+      "pattern": "parking_benign",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "주차장 입구의 요금 안내입니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "가격표를 보고 주차를 선택하실 수 있습니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    },
+    {
+      "id": "txt_pub_wedding_venue",
+      "name": "wedding venue",
+      "category": "NORMAL",
+      "sourceId": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=71675",
+      "pattern": "invitation_benign",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "가족 결혼식이 있습니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "식장 주소와 시간은 초대장에 적혀 있습니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    },
+    {
+      "id": "txt_pub_oauth_official_refusal",
+      "name": "oauth official refusal",
+      "category": "NORMAL",
+      "sourceId": "https://www.ic3.gov/PSA/2026/PSA260901",
+      "pattern": "credential_benign",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "회사 보안 교육 안내입니다.",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "출처가 불확실한 앱에는 이메일 권한을 허용하지 마세요.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    },
+    {
+      "id": "txt_pub_normal_bank_mention",
+      "name": "normal bank mention",
+      "category": "NORMAL",
+      "sourceId": "https://consumer.ftc.gov/consumer-alerts/2026/05/how-are-scammers-trying-reach-you",
+      "pattern": "bank_benign",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "계좌에 이상 거래가 있다는 알림을 확인하셨나요?",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "전화로 돈을 옮기지 말고 은행 공식 앱에서 확인하세요.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    },
+    {
+      "id": "txt_pub_ambig_qr_intro",
+      "name": "ambig qr intro",
+      "category": "AMBIGUOUS",
+      "sourceId": "https://consumer.ftc.gov/consumer-alerts/2026/04/text-about-traffic-violation-probably-scam",
+      "pattern": "unknown_context",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "QR 안내판을 보셨나요?",
+          "cue": "FICTIONAL_SIMULATION"
+        },
+        {
+          "speaker": "caller",
+          "text": "내용을 정확히 확인해 주세요.",
+          "cue": "FICTIONAL_SIMULATION"
+        }
+      ]
+    }
+  ]
+}

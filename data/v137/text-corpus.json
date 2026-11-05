@@ -1,0 +1,859 @@
+{
+  "version": "v137",
+  "syntheticOnly": true,
+  "derivedFromPublicPatternsNotVictimTranscripts": true,
+  "cases": [
+    {
+      "id": "txt_parcel_portal",
+      "name": "등기 사칭 · 주소창 이동",
+      "category": "FRAUD_PATTERN",
+      "pattern": "parcel",
+      "sourceId": "KISA_SMISH",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "등기 배송 관련 안내드립니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "조회가 아직 안 되어 주소를 확인해야 합니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "휴대전화 인터넷 주소창을 열어주세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "조회 페이지에서 개인정보를 입력하면 사건을 확인할 수 있습니다.",
+          "cue": "합성 테스트 4번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_prosecutor_case",
+      "name": "검찰 사칭 · 사건 연루",
+      "category": "FRAUD_PATTERN",
+      "pattern": "prosecutor",
+      "sourceId": "IC3_GOV",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "법원 관련 서류 안내입니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "저는 검찰 수사관이라고 주장하는 담당자입니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "당신 명의가 대포통장 범죄에 연루됐습니다.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "개인정보를 입력해서 신원을 확인해야 합니다.",
+          "cue": "합성 테스트 4번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_bank_transfer",
+      "name": "은행 사칭 · 안전 계좌",
+      "category": "FRAUD_PATTERN",
+      "pattern": "bank",
+      "sourceId": "FTC_BANK",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "은행 보안팀입니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "고객님 계좌에 의심 거래가 발생했습니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "보호를 위해 자금을 안전 계좌로 이체하세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "다른 사람에게는 말하지 마세요.",
+          "cue": "합성 테스트 4번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_toll_smish",
+      "name": "통행료 문자 · 납부 링크",
+      "category": "FRAUD_PATTERN",
+      "pattern": "toll",
+      "sourceId": "IC3_TOLL",
+      "country": "US",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "미납 통행료 안내입니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "추가 요금이 생기기 전에 바로 결제해야 합니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "문자에 있는 링크를 열고 카드 정보를 입력하세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_task_unfreeze",
+      "name": "가짜 부업 · 출금 예치금",
+      "category": "FRAUD_PATTERN",
+      "pattern": "jobtask",
+      "sourceId": "FTC_TASK",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "온라인 상품 평가를 하면 보상을 받을 수 있어요.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "수익은 화면에서 확인할 수 있습니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "출금을 하려면 먼저 예치금을 입금해야 합니다.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "지금 충전하면 수수료까지 돌려받습니다.",
+          "cue": "합성 테스트 4번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_romance_crypto",
+      "name": "연애 사칭 · 코인 투자",
+      "category": "FRAUD_PATTERN",
+      "pattern": "romance",
+      "sourceId": "FTC_ROMANCE",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "우리 이제 자주 연락하네요.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "저와 함께 암호화폐 투자해 볼래요?",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "저만 아는 수익 보장 상품이 있어요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "먼저 코인을 충전해야 인출할 수 있습니다.",
+          "cue": "합성 테스트 4번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_recovery_fee",
+      "name": "피해금 환급 사칭 · 선납",
+      "category": "FRAUD_PATTERN",
+      "pattern": "recovery",
+      "sourceId": "FTC_BANK",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "사기 피해금 환급을 도와드립니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "돌려받으려면 환급 신청을 해야 합니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "먼저 회수 수수료를 입금하셔야 합니다.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_remote_helper",
+      "name": "기술 지원 사칭 · 원격 앱",
+      "category": "FRAUD_PATTERN",
+      "pattern": "remote",
+      "sourceId": "IC3_GOV",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "보안 오류를 해결해 드릴게요.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "지금 원격제어 앱을 설치하세요.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "화면 공유를 켜주면 확인하겠습니다.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_wedding_qr",
+      "name": "청첩장 사칭 · QR 유도",
+      "category": "FRAUD_PATTERN",
+      "pattern": "qrcode",
+      "sourceId": "KISA_SMISH",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "친구 결혼식 청첩장을 보내드립니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "안내된 QR코드를 스캔하세요.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "연결된 페이지에서 본인확인용 개인정보를 입력하세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_wrong_number",
+      "name": "잘못 온 문자 · 투자 유도",
+      "category": "FRAUD_PATTERN",
+      "pattern": "investment",
+      "sourceId": "FTC_TEXT",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "아, 다른 분께 메시지가 갔네요.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "그래도 반가워요, 혹시 투자에 관심 있나요?",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "수익이 보장되는 코인 투자입니다.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "우선 소액을 입금해 보세요.",
+          "cue": "합성 테스트 4번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_loan_prepay",
+      "name": "대출 승인 사칭 · 선입금",
+      "category": "FRAUD_PATTERN",
+      "pattern": "loan",
+      "sourceId": "FTC_TEXT",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "빠른 대출 승인 대상자입니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "오늘까지 서류를 등록하셔야 합니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "대출금 지급 전에 보증금부터 입금해 주세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_family_gift",
+      "name": "가족 사칭 · 상품권",
+      "category": "FRAUD_PATTERN",
+      "pattern": "family",
+      "sourceId": "IC3_AI",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "엄마, 내 휴대전화가 고장나서 다른 번호예요.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "급한 문제가 생겼어요.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "상품권 코드를 사서 사진으로 보내줘요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "아무에게도 알리지 말고 도와줘요.",
+          "cue": "합성 테스트 4번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_benefit_portal",
+      "name": "지원금 사칭 · 로그인",
+      "category": "FRAUD_PATTERN",
+      "pattern": "benefit",
+      "sourceId": "FTC_TEXT",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "정부 지원금 지급 대상 안내입니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "오늘 신청하지 않으면 지급이 중단됩니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "문자 링크에서 계정과 비밀번호를 입력해 주세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_recruit_fee",
+      "name": "채용 사칭 · 등록비",
+      "category": "FRAUD_PATTERN",
+      "pattern": "job",
+      "sourceId": "FTC_JOB",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "재택근무 채용에 합격하셨습니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "면접은 생략할 수 있습니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "급여 지급 등록을 위해 계좌와 주민등록번호가 필요합니다.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "등록비를 먼저 입금하면 바로 시작됩니다.",
+          "cue": "합성 테스트 4번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_crypto_guarantee",
+      "name": "투자 고수익 · 원금 보장",
+      "category": "FRAUD_PATTERN",
+      "pattern": "investment",
+      "sourceId": "FTC_INVEST",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "투자 모임에서 연락드렸습니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "저희는 매주 수익이 보장됩니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "원금 보장 상품이라 손실이 없습니다.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "오늘 투자금을 입금해 주세요.",
+          "cue": "합성 테스트 4번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_delivery_card",
+      "name": "배송 추가 요금 · 카드 정보",
+      "category": "FRAUD_PATTERN",
+      "pattern": "parcel",
+      "sourceId": "FTC_PARCEL",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "해외 배송 재배달 안내입니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "주소 확인이 누락되어 소액 수수료가 생겼습니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "안내 링크에 접속해서 카드번호를 입력하세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_boss_invoice",
+      "name": "상사 사칭 · 긴급 송금",
+      "category": "FRAUD_PATTERN",
+      "pattern": "boss",
+      "sourceId": "IC3_AI",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "대표님 요청으로 거래처 결제 건을 전달합니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "오늘 안에 처리해야 해서 급합니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "기존 계좌가 바뀌었으니 새로운 계좌로 송금하세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "이 내용은 외부에 공유하지 마세요.",
+          "cue": "합성 테스트 4번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_tech_renewal",
+      "name": "보안 서비스 갱신 · 원격",
+      "category": "FRAUD_PATTERN",
+      "pattern": "remote",
+      "sourceId": "IC3_GOV",
+      "country": "KR",
+      "expectedLatestAdvisory": "VERIFY",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "보안 서비스 구독이 만료됐습니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "유료 갱신이 필요합니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "지금 화면 공유를 켜서 원격제어 앱을 설치하세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_delivery_official",
+      "name": "정상 배송 · 공식 주문 확인",
+      "category": "NORMAL",
+      "pattern": "normal",
+      "sourceId": "FTC_PARCEL",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "고객님이 요청한 배송 조회 방법을 안내합니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "구매하신 쇼핑몰 주문 내역에서 직접 확인하실 수 있습니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "문자 링크를 누르거나 개인정보를 알려줄 필요가 없습니다.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_bank_fraud_education",
+      "name": "정상 은행 피싱 예방",
+      "category": "NORMAL",
+      "pattern": "education",
+      "sourceId": "FTC_BANK",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "보이스피싱 예방 안내입니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "은행을 사칭해 안전 계좌로 송금하라는 말은 사기일 수 있습니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "송금하지 마세요. 공식 앱으로 직접 연락하세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_reporter_quotes",
+      "name": "뉴스 인터뷰 · 사기 문구 인용",
+      "category": "NORMAL",
+      "pattern": "education",
+      "sourceId": "IC3_AI",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "오늘은 보이스피싱 피해 예방 교육 시간입니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "범인이 \"인증번호를 알려주세요\"라고 했다는 사례입니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "절대 인증번호를 제공하지 마세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_family_dinner",
+      "name": "가족 저녁 약속",
+      "category": "NORMAL",
+      "pattern": "normal",
+      "sourceId": "FTC_TEXT",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "오늘 저녁 메뉴는 뭐가 좋을까?",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "집에 몇 시쯤 올 수 있니?",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "고맙다. 내일 이야기하자.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_official_help",
+      "name": "정상 수사기관 문의 안내",
+      "category": "NORMAL",
+      "pattern": "education",
+      "sourceId": "IC3_GOV",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "검찰 사건과 관련된 전화가 왔다면 신원을 확인하세요.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "수사기관을 사칭하는 보이스피싱이 있을 수 있습니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "상대가 알려준 번호가 아니라 공식 대표번호를 확인하세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_investment_warning",
+      "name": "정상 투자 위험 고지",
+      "category": "NORMAL",
+      "pattern": "education",
+      "sourceId": "FTC_INVEST",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "투자에는 원금 손실 가능성이 있습니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "수익 보장이라는 광고를 조심해야 합니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "충분히 알아보고 결정하세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_legit_recruiter",
+      "name": "정상 채용 안내",
+      "category": "NORMAL",
+      "pattern": "normal",
+      "sourceId": "FTC_JOB",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "지원하신 공고 면접 일정을 안내드립니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "신분증이나 계좌 정보는 전화로 받지 않습니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "공식 채용 사이트에서 확인 부탁드립니다.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_normal_delivery_qr",
+      "name": "정상 QR 보안 안내",
+      "category": "NORMAL",
+      "pattern": "education",
+      "sourceId": "KISA_SMISH",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "QR코드로 연결되는 링크는 공식 출처인지 확인하세요.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "출처를 알 수 없으면 개인정보를 입력하지 마세요.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_user_scary_quote",
+      "name": "사용자만 사기 경험 진술",
+      "category": "NORMAL",
+      "pattern": "user_quote",
+      "sourceId": "FTC_TEXT",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "문자로 OTP를 달라는 사기를 당할 뻔했어요.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "신고 안내를 드리겠습니다. 직접 공식 기관으로 연락하세요.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_clinic_appointment",
+      "name": "정상 병원 진료 안내",
+      "category": "NORMAL",
+      "pattern": "normal",
+      "sourceId": "FTC_TEXT",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "내일 예약된 진료 일정 안내입니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "변경하실 경우 병원 대표번호로 연락해 주세요.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_unclear_letter",
+      "name": "불분명한 공문 우편",
+      "category": "AMBIGUOUS",
+      "pattern": "uncertain",
+      "sourceId": "IC3_GOV",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "중요한 서류가 도착할 예정입니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "필요하면 담당 부서에 연락 부탁드립니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_hurry_but_no_request",
+      "name": "급하지만 일반적인 안내",
+      "category": "AMBIGUOUS",
+      "pattern": "uncertain",
+      "sourceId": "FTC_TEXT",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "지금 급하게 통화할 수 있으신가요?",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "일정 변경에 관한 이야기입니다.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "가능할 때 다시 연락 주세요.",
+          "cue": "합성 테스트 3번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_job_reply_yes",
+      "name": "채용 문자에 답장만 요청",
+      "category": "AMBIGUOUS",
+      "pattern": "early_job",
+      "sourceId": "FTC_JOB",
+      "country": "US",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "재택 부업 인사 담당자입니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "관심이 있으시면 YES라고 답장해 주세요.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    },
+    {
+      "id": "txt_qr_without_ask",
+      "name": "QR 코드 소개만 언급",
+      "category": "AMBIGUOUS",
+      "pattern": "uncertain",
+      "sourceId": "KISA_SMISH",
+      "country": "KR",
+      "expectedLatestAdvisory": "NONE",
+      "turns": [
+        {
+          "speaker": "caller",
+          "text": "행사 정보는 QR코드로도 볼 수 있습니다.",
+          "cue": "합성 테스트 1번째 발화 · 정답은 평가기에만 존재"
+        },
+        {
+          "speaker": "caller",
+          "text": "공식 안내장을 확인해 주세요.",
+          "cue": "합성 테스트 2번째 발화 · 정답은 평가기에만 존재"
+        }
+      ]
+    }
+  ]
+}

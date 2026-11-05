@@ -1,0 +1,29 @@
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+meta.env
+.safecall-private/
+.safecall/
+
+# Dependencies and generated application output
+node_modules/
+.next/
+.vercel/
+out/
+coverage/
+*.tsbuildinfo
+
+# Recording, evidence, logs and potentially sensitive transcripts
+artifacts/
+validation-logs/
+*.mp4
+*.webm
+*.log
+
+# Local editor state
+.cursor/
+.DS_Store
+npm-debug.log*
