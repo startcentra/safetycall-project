@@ -1,0 +1,26 @@
+:root{color-scheme:dark;--bg:#0c0e13;--card:#151922;--line:#2a3140;--text:#f4f6f8;--muted:#9aa3b2;--mint:#3dd6b5;--ink:#06241c;font-family:"Apple SD Gothic Neo","Pretendard","Segoe UI",sans-serif;background:var(--bg);color:var(--text)}
+*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+.top{max-width:1080px;margin:0 auto;padding:22px 24px 0;display:flex;align-items:center;justify-content:space-between}
+.mark{font-weight:760;letter-spacing:.14em;font-size:14px}
+.lang{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:999px}
+.lang button{border:0;background:transparent;color:var(--muted);border-radius:999px;padding:7px 12px;font-size:13px;font-weight:650}
+.lang button[aria-pressed="true"]{background:var(--text);color:#111}
+.hero,.flow,.enter{max-width:1080px;margin:0 auto;padding:0 24px}
+.hero{padding-top:72px;padding-bottom:56px}
+.kicker{margin:0 0 16px;color:var(--mint);font-size:13px;font-weight:700;letter-spacing:.08em}
+h1{margin:0;font-size:clamp(40px,6vw,68px);line-height:1.12;letter-spacing:-.045em;font-weight:740;max-width:14ch}
+.lede{max-width:38em;margin:22px 0 0;color:#c9d0da;font-size:18px;line-height:1.6}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.primary,.ghost{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:999px;font-weight:700}
+.primary{background:var(--mint);color:var(--ink)}
+.ghost{border:1px solid var(--line);color:var(--text)}
+.flow{padding-bottom:28px}
+.flow h2,.enter h2{font-size:28px;letter-spacing:-.04em;margin:0 0 18px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.steps li{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;min-height:220px}
+.steps span{display:block;color:var(--mint);font-size:12px;font-weight:750;letter-spacing:.12em}
+.steps h3{margin:18px 0 8px;font-size:20px;letter-spacing:-.03em}
+.steps p,.enter p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}
+.enter{padding:36px 24px 80px}
+.enter p{max-width:40em;margin:8px 0 22px}
+@media(max-width:860px){.hero{padding-top:42px}h1{max-width:none}.steps{grid-template-columns:1fr}.steps li{min-height:0}}

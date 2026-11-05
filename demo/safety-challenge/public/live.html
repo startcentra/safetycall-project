@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html data-i18n-title="lv.pageTitle" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#0c0e13" name="theme-color"/>
+<title>SAFETYED · Live call protection</title>
+<link href="/live.css" rel="stylesheet"/>
+</head>
+<body data-level="low" data-phase="idle">
+<!-- Icon paths adapted from Lucide (https://lucide.dev), ISC License. Inlined; no external icon script is loaded. -->
+<svg aria-hidden="true" class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-phone-off" viewBox="0 0 24 24"><path d="M10.1 13.9a14 14 0 0 0 3.73 2.1l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-3.49-2.9"/><path d="M5.17 13.38A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91"/><path d="M22 2 2 22"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><rect height="16" rx="1" width="4" x="14" y="4"/><rect height="16" rx="1" width="4" x="6" y="4"/></symbol>
+<symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.4 18.4a9 9 0 0 0 0-12.7"/></symbol>
+<symbol id="i-volume-x" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/></symbol>
+<symbol id="i-glasses" viewBox="0 0 24 24"><circle cx="6" cy="15" r="4"/><circle cx="18" cy="15" r="4"/><path d="M14 15a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/><path d="M2.5 13 5 7c.7-1.3 1.4-2 3-2"/><path d="M21.5 13 19 7c-.7-1.3-1.5-2-3-2"/></symbol>
+<symbol id="i-map" viewBox="0 0 24 24"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-landmark" viewBox="0 0 24 24"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></symbol>
+<symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/></symbol>
+<symbol id="i-file-audio" viewBox="0 0 24 24"><path d="M17.5 22h.5a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M2 19a2 2 0 1 1 4 0v1a2 2 0 1 1-4 0v-4a6 6 0 0 1 12 0v4a2 2 0 1 1-4 0v-1a2 2 0 1 1 4 0"/></symbol>
+<symbol id="i-text" viewBox="0 0 24 24"><path d="M17 6.1H3"/><path d="M21 12.1H3"/><path d="M15.1 18H3"/></symbol>
+<symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+</svg>
+<a class="skip" href="#stage">Skip to content</a>
+<div class="shell">
+<header class="bar">
+ <a class="brand" href="/"><span class="brand-mark"><svg><use href="#i-shield"/></svg></span><span><strong>SAFETYED</strong><small data-i18n="lv.product">Call protection</small></span></a>
+ <div class="bar-meta"><span class="connection" data-i18n="conn.pending" id="connection" role="status">Connecting</span><span class="case"><span data-i18n="lv.case">Case</span> <b id="case-id">—</b></span></div>
+ <div aria-label="Language" class="lang" data-i18n-aria="aria.lang" role="group"><button data-set-lang="en" type="button">English</button><button data-set-lang="ko" type="button">한국어</button></div>
+ <div class="bar-actions">
+  <button class="btn ghost" id="open-hud" type="button"><svg><use href="#i-glasses"/></svg><span data-i18n="lv.hud">Glasses HUD</span></button>
+  <button class="btn" id="reset" type="button"><svg><use href="#i-refresh"/></svg><span data-i18n="lv.restart">Restart</span></button>
+ </div>
+</header>
+<section aria-labelledby="legend-title" class="legend">
+ <h2 class="legend-title" data-i18n="lv.legend" id="legend-title">Provenance</h2>
+ <ul>
+  <li class="prov" data-prov="SCRIPTED_MOCK"><i></i><span data-i18n="prov.SCRIPTED_MOCK">Scripted mock</span></li>
+  <li class="prov" data-prov="ACTUAL_STREAMED_ASR"><i></i><span data-i18n="prov.ACTUAL_STREAMED_ASR">Actual streamed ASR</span></li>
+  <li class="prov" data-prov="LOCAL_CONTRACT_SIMULATOR"><i></i><span data-i18n="prov.LOCAL_CONTRACT_SIMULATOR">Local contract simulator</span></li>
+  <li class="prov" data-prov="RULE_ENGINE"><i></i><span data-i18n="prov.RULE_ENGINE">Rule engine</span></li>
+  <li class="prov" data-prov="MODEL_VERIFIED"><i></i><span data-i18n="prov.MODEL_VERIFIED">Model-verified analysis</span></li>
+  <li class="prov" data-prov="SIMULATED_GPS"><i></i><span data-i18n="prov.SIMULATED_GPS">Simulated GPS</span></li>
+  <li class="prov" data-prov="SIMULATED_BANK_HOLD"><i></i><span data-i18n="prov.SIMULATED_BANK_HOLD">Simulated bank hold</span></li>
+ </ul>
+</section>
+<main class="stage" id="stage" tabindex="-1">
+<section aria-labelledby="col-intel" class="col col-intel">
+ <h2 class="col-title" data-i18n="lv.col.intel" id="col-intel">01 · Intelligence</h2>
+ <article class="card source">
+  <header class="card-h"><h3><svg><use href="#i-file-audio"/></svg><span data-i18n="lv.source">Synthetic TTS call</span></h3><span class="pill" id="asr-provider">—</span></header>
+  <label class="field-label" data-i18n="lv.choose" for="media-select">Fictional call</label>
+  <select class="select" id="media-select"><option value="synthetic-prosecutor-en">Synthetic prosecutor impersonation · English</option><option value="synthetic-delivery-en">Synthetic delivery scam · English</option></select>
+  <div class="simulation-controls" role="group" aria-label="Analysis mode">
+   <button class="mode-choice active" id="mode-replay" type="button" aria-pressed="true">Stable 20-turn replay</button>
+   <button class="mode-choice" id="mode-live" type="button" aria-pressed="false">Meta live ASR</button>
+  </div>
+  <button class="btn ghost shuffle-scenario" id="shuffle-scenario" type="button">↻ Choose another 20-turn case</button>
+  <p class="mode-disclosure" id="mode-disclosure" role="status">OFFLINE SCRIPT REPLAY · rules only · no STT or Meta AI call</p>
+  <p class="note" id="media-kind"></p>
+  <p class="note" data-i18n="lv.ready.loading" id="ready-note" role="status">Checking analysis readiness…</p>
+  <label class="check"><input id="rights" type="checkbox"/><span data-i18n="lv.rights">I have the right to use this recording and to send it to an external service for analysis.</span></label>
+  <label class="check"><input id="consent" type="checkbox"/><span data-i18n="lv.consent" id="consent-text">I consent to stream this audio to Meta in real time for transcription and risk analysis.</span></label>
+  <p class="note faint" id="caps"></p>
+  <p class="note hint" data-i18n="lv.needConsent" id="consent-hint">Tick both boxes to analyze. Without them the recording plays as audio only.</p>
+ </article>
+ <article class="card transcript-card">
+  <header class="card-h"><h3><svg><use href="#i-text"/></svg><span data-i18n="lv.transcript">Transcript</span></h3><span class="pill" id="turn-counter">0</span></header>
+  <div aria-label="Transcript" aria-live="polite" aria-relevant="additions" class="transcript" id="transcript" role="log" tabindex="0"></div>
+  <p class="note faint" data-i18n="lv.timingNote">Times come from ASR turn boundaries and are approximate.</p>
+  <p class="note hint" data-i18n="lv.seekHint" hidden id="seek-hint">Review mode: select a line to replay that moment.</p>
+ </article>
+ <article class="card events-card">
+  <header class="card-h"><h3><svg><use href="#i-activity"/></svg><span data-i18n="lv.events">Server events</span></h3><span class="pill" id="event-count">0</span></header>
+  <ol class="events" id="events" tabindex="0"></ol>
+ </article>
+</section>
+<section aria-labelledby="col-call" class="col col-call">
+ <h2 class="col-title" data-i18n="lv.col.call" id="col-call">02 · Incoming call</h2>
+ <div class="phone">
+  <div class="phone-status"><span id="phone-clock">--:--</span><span id="phone-phase">Incoming call</span></div>
+  <div class="screen">
+   <audio aria-label="Synthetic call audio" id="video" preload="metadata"></audio>
+   <div class="incoming" id="incoming">
+    <div aria-hidden="true" class="avatar"><svg><use href="#i-phone"/></svg></div><div aria-hidden="true" class="voice-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="caller-name" data-i18n="lv.caller">Unknown number</p>
+    <p class="caller-sub" id="caller-sub">Incoming call</p>
+    <p class="situation" id="situation">—</p>
+   </div>
+   <div class="overlay" hidden id="overlay" role="status"><span aria-hidden="true" class="spinner" id="overlay-spinner"></span><p id="overlay-text"></p><button class="btn" hidden id="overlay-btn" type="button"></button></div>
+  </div>
+  <div class="progress"><div aria-hidden="true" class="track"><span id="progress-bar"></span><span id="progress-asr"></span></div><div class="times"><span id="time-cur">00:00</span><span id="time-total">00:00</span></div></div>
+  <div class="phone-alert" id="phone-alert"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><b id="alert-title"></b><p id="alert-detail"></p></div></div>
+  <div class="controls">
+   <button aria-label="Answer" class="round answer" id="answer" type="button"><svg><use href="#i-phone"/></svg></button>
+   <button aria-label="Pause" class="round" disabled id="pause" type="button"><svg><use href="#i-pause"/></svg></button>
+   <button aria-label="Mute" class="round" id="mute" type="button"><svg><use href="#i-volume"/></svg></button>
+   <button aria-label="End call" class="round hang" disabled id="stop" type="button"><svg><use href="#i-phone-off"/></svg></button>
+  </div>
+ </div>
+ <article class="card sync">
+  <header class="card-h"><h3><svg><use href="#i-activity"/></svg><span data-i18n="lv.asr">Speech-to-text</span></h3><span class="pill" id="asr-status">—</span></header>
+  <dl class="kv"><div><dt data-i18n="lv.player">Player</dt><dd id="sync-player">—</dd></div><div><dt data-i18n="lv.cost.audio">Audio sent</dt><dd id="sync-sent">—</dd></div><div><dt data-i18n="lat.playerLagMs">Player − speech end</dt><dd id="sync-lag">—</dd></div></dl>
+  <p aria-live="off" class="partial-line" id="sync-partial"></p>
+ </article>
+</section>
+<section aria-labelledby="col-protect" class="col col-protect">
+ <h2 class="col-title" data-i18n="lv.col.protect" id="col-protect">03 · Protection</h2>
+ <article class="card decision" data-prov="RULE_ENGINE">
+  <header class="card-h"><h3><svg><use href="#i-gauge"/></svg><span data-i18n="lv.risk">Rule engine</span></h3><span class="pill band" id="risk-band">—</span></header>
+  <div class="risk-line"><b id="risk-index">0</b><span>/ 100</span></div>
+  <div aria-hidden="true" class="meter"><span id="risk-fill"></span></div>
+  <p class="note faint" data-i18n="lv.riskNote">Experimental rules index, not a probability. Only the server rules decide protection.</p>
+  <h4 data-i18n="lv.signals">Rule signals</h4>
+  <ul class="signals" id="signals"></ul>
+ </article>
+ <article class="card meta" data-prov="MODEL_VERIFIED" id="meta-card">
+  <header class="card-h"><h3><svg><use href="#i-sparkles"/></svg><span data-i18n="lv.meta">Model verification</span></h3><span class="pill" id="meta-status">—</span></header>
+  <div aria-live="polite" id="meta-body"></div>
+  <p class="note faint" data-i18n="lv.meta.noEffect">Model output is advisory. It never changes the SafeBank hold.</p>
+ </article>
+ <article class="card hud">
+  <header class="card-h"><h3><svg><use href="#i-glasses"/></svg><span data-i18n="lv.hudTitle">Glasses HUD · read-only</span></h3><span class="pill" id="hud-sev">—</span></header>
+  <div class="hud-view"><b id="hud-title">—</b><p id="hud-copy"></p><ul class="hud-cues" id="hud-cues"></ul></div>
+ </article>
+ <div class="split">
+  <article class="card place" data-prov="SIMULATED_GPS">
+   <header class="card-h"><h3><svg><use href="#i-map"/></svg><span data-i18n="lv.gps">Virtual GPS</span></h3><span class="pill" id="geo-state">—</span></header>
+   <div class="map-canvas">
+    <svg aria-label="Simulated route to the bank" id="journey-map" preserveAspectRatio="xMidYMid meet" role="img" viewBox="0 0 620 250">
+     <defs><pattern height="30" id="map-grid" patternUnits="userSpaceOnUse" width="30"><path d="M30 0H0V30" fill="none" stroke="#2a3140" stroke-width="0.7"/></pattern></defs>
+     <rect fill="#12161e" height="250" width="620"/><rect fill="url(#map-grid)" height="250" width="620"/>
+     <g class="streets"><path d="M0 35L620 215M0 132L620 35M45 0L250 250M175 0L380 250M450 0L590 250M0 225L620 120"/><path class="wide-road" d="M-10 172L640 108"/></g>
+     <polyline id="route-base" points=""/><polyline id="route-progress" points=""/>
+     <circle cx="551" cy="40" id="bank-radius" r="30"/>
+     <g transform="translate(551 40)"><circle fill="#3dd6b5" r="12"/><path d="M-5 3V-4L0 -7L5 -4V3M-8 4H8" fill="none" stroke="#07120f" stroke-width="2"/></g>
+     <g id="you-pin" transform="translate(70 205)"><circle fill="#7eb6ff" opacity=".18" r="17"/><circle fill="#9ec8ff" r="8" stroke="#f4f7fb" stroke-width="3"/></g>
+    </svg>
+    <div class="map-overlay"><b id="zone-name">—</b><span id="distance">—</span></div>
+   </div>
+   <p class="note faint" id="gps-next"></p>
+   <p class="note faint" data-i18n="lv.gpsNote">SIMULATED_GPS route, not your location. Location alone never confirms fraud.</p>
+  </article>
+  <article class="card account" data-prov="SIMULATED_BANK_HOLD">
+   <header class="card-h"><h3><svg><use href="#i-landmark"/></svg><span data-i18n="lv.bank">SafeBank · virtual</span></h3><span class="pill" id="bank-flag">—</span></header>
+   <p class="balance">₩1,240,000</p>
+   <p class="gate" id="gate-status">—</p>
+   <button class="btn pay" id="transfer" type="button"><span data-i18n="lv.send">Try virtual transfer ₩500,000</span></button>
+   <p aria-live="polite" class="note" id="bank-result"></p>
+   <p class="note faint" data-i18n="lv.bankNote">Only SafeBank virtual transfers can be held. No real bank, card or phone OS is controlled.</p>
+  </article>
+ </div>
+ <article class="card monitor">
+  <header class="card-h"><h3><svg><use href="#i-gauge"/></svg><span data-i18n="lv.monitor">Latency &amp; cost</span></h3></header>
+  <dl class="kv" id="latency"></dl>
+  <dl class="kv" id="cost"></dl>
+ </article>
+</section>
+</main>
+</div>
+<div aria-describedby="modal-copy" aria-labelledby="modal-title" aria-modal="true" class="modal" hidden id="safety-modal" role="alertdialog">
+ <div class="modal-card"><div aria-hidden="true" class="modal-sign"><svg><use href="#i-alert"/></svg></div><h2 data-i18n="lv.modalTitle" id="modal-title">Stop before sending money</h2><p id="modal-copy"></p><button class="btn pay" data-i18n="lv.ok" id="modal-dismiss" type="button">I understand</button></div>
+</div>
+<p aria-live="assertive" class="sr-only" id="sr-status"></p>
+<script src="/live.js" type="module"></script>
+</body>
+</html>

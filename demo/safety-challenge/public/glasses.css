@@ -1,0 +1,62 @@
+:root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;--white:#f6fcff;--soft:#b8d3db;--tint:#60dfb6;--glow:rgba(49,212,167,.30);background:#070e15;color:#eaf6fa}
+*{box-sizing:border-box}body{margin:0;min-width:320px;min-height:100vh}button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #75e3c6;outline-offset:4px}
+.workspace{display:flex;align-items:center;justify-content:center;gap:clamp(30px,5vw,100px);min-height:100vh;padding:36px;flex-wrap:wrap;background:radial-gradient(ellipse at 36% 45%,#153041 0,#0c1a24 40%,#070e15 75%)}
+.viewer{width:min(620px,100%);flex:0 0 auto}.preview-label{display:flex;gap:8px;justify-content:center;align-items:center;font-size:10px;letter-spacing:2px;color:#89aebd;margin-bottom:18px;font-weight:800}.preview-dot{width:6px;height:6px;background:#45d6ae;border-radius:50%;box-shadow:0 0 12px #45d6ae}
+.lens{width:min(600px,100%);aspect-ratio:1;margin:auto;position:relative;background:radial-gradient(circle at 52% 45%,#103c49 0%,#031a27 37%,#020810 70%,#000 100%);border:1px solid #284856;border-radius:40px;overflow:hidden;box-shadow:0 0 0 10px #132a35,0 0 0 11px #2f4e60,0 36px 120px #0009;--tint:#60dfb6;--glow:rgba(49,212,167,.30)}
+.lens:before{content:"";position:absolute;inset:-25%;border-radius:50%;pointer-events:none;background:radial-gradient(circle,transparent 41%,rgba(0,0,0,.7) 77%)}
+.lens[data-severity="CAUTION"]{--tint:#f8c865;--glow:rgba(250,190,69,.35);background:radial-gradient(circle at 52% 45%,#322b17 0%,#19170f 38%,#040607 73%,#000 100%)}
+.lens[data-severity="HIGH"]{--tint:#ff8d77;--glow:rgba(255,87,67,.36);background:radial-gradient(circle at 52% 45%,#3d1b1b 0%,#190f11 43%,#050407 75%,#000 100%)}
+.lens[data-severity="CLOSED"]{--tint:#b4c4d3;--glow:rgba(170,190,212,.2)}
+.hud{position:absolute;inset:0;padding:7.5% 7% 5%;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:space-between;z-index:1}
+.hud-top,.hud-bottom{width:100%}.hud-top{display:flex;justify-content:space-between;align-items:center;font-size:clamp(8px,1.55vw,11px);letter-spacing:1.3px;color:#c9e5eb;font-weight:700;gap:12px}.hud-brand{color:#b9d9e5}.sigil{color:var(--tint);font-size:1.4em;margin-right:5px}.hud-connection{display:flex;align-items:center;gap:6px;color:var(--soft)}.hud-connection:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--tint);box-shadow:0 0 10px var(--tint)}
+.hud-connection[data-state="RECONNECTING"]:before{background:#f8c865;box-shadow:0 0 10px #f8c865}
+.hud-connection[data-state="EXPIRED"]:before{background:#ff8d77;box-shadow:0 0 10px #ff8d77}
+.hud-center{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0;flex:1;width:100%;padding:1% 0}
+.status-orbit{width:clamp(60px,18%,106px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;margin:0 auto clamp(13px,2.5%,22px);border:1px solid var(--tint);box-shadow:0 0 28px var(--glow),inset 0 0 28px var(--glow);background:radial-gradient(circle,var(--glow) 0,transparent 64%)}
+.orbit-core{font-size:clamp(24px,6vw,45px);font-weight:800;line-height:1;color:var(--tint)}.hud-tag{margin:0 0 11px;font-size:clamp(10px,2.2vw,15px);font-weight:900;color:var(--tint);letter-spacing:1.8px}
+.hud h1{font-size:clamp(20px,4.5vw,34px);line-height:1.25;letter-spacing:-1.3px;font-weight:800;margin:0 0 14px;max-width:96%;text-wrap:balance;color:var(--white)}
+#hud-message{font-size:clamp(12px,2.1vw,17px);line-height:1.45;color:#e7f7fb;max-width:92%;margin:0;text-wrap:balance;word-break:keep-all;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.hud-cues{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:4px;max-width:92%}
+.hud-cues li{font-size:clamp(11px,1.8vw,14px);line-height:1.3;color:#f4fff9;font-weight:700;letter-spacing:0}
+.hud-cues li:before{content:"· ";color:var(--tint)}
+.lens.detail-view .status-orbit{width:54px;margin-bottom:8px}
+#hud-title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hud-status-row{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;font-weight:650;color:#e7f4fb;font-size:clamp(10px,1.7vw,13px)}#hud-meta{max-width:92%;overflow-wrap:anywhere}.hud-bar{height:4px;background:#384f55;border-radius:10px;overflow:hidden;margin-top:13px}.hud-bar span{display:block;width:10%;height:100%;border-radius:10px;background:var(--tint);box-shadow:0 0 12px var(--tint);transition:width .35s}
+.hud-warning{font-size:clamp(7px,1.4vw,10px);letter-spacing:.6px;color:#9eb0b7;line-height:1.4;margin:15px 0 0}
+.preview-footer{text-align:center;color:#7795a0;font-size:11px;margin-top:23px}
+.controls{width:290px;max-width:100%;flex:0 0 290px}.eyebrow{color:#65dab7;font-size:11px;letter-spacing:3px;font-weight:800;margin-bottom:19px}.controls h2{font-size:37px;line-height:1.2;letter-spacing:-2px;margin:0 0 20px}.controls h2 em{font-style:normal;color:#68dab6}.controls-intro{color:#a0b7c3;font-size:13px;line-height:1.85;margin:0 0 23px}.status-card{display:flex;justify-content:space-between;align-items:start;gap:10px;border-bottom:1px solid #2a3e47;padding:14px 0;font-size:12px;color:#95aab5}.status-card strong{font-size:12px;color:#e1f1f6;text-align:right;word-break:break-word}.controls button{width:100%;padding:13px;margin:22px 0 8px;border-radius:10px;border:1px solid #6ad3b2;color:#b5ffe2;background:#0d302e;font-weight:800}.guide,.scope{font-size:11px;line-height:1.8;color:#8ca4b0}.scope{border-top:1px solid #2a3e47;padding-top:13px;margin-top:18px}
+@media (max-width:1050px){.workspace{flex-direction:column;padding:30px 20px}.controls{width:min(920px,100%);flex:0 1 auto}.viewer{max-width:920px}}
+.viewer{width:min(920px,100%)}
+.wear{position:relative;width:100%;aspect-ratio:16/9;border-radius:28px;overflow:hidden;background:#07090c;box-shadow:0 28px 90px #000c}
+.world,.world img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.world-near{opacity:0;transition:opacity .55s ease}
+.wear[data-place="bank"] .world-near{opacity:1}
+.wear[data-severity="CLOSED"] .world img{filter:saturate(.35) brightness(.72)}
+.pair{position:absolute;inset:16% 8% 18%;display:flex;align-items:stretch;justify-content:center}
+.left-glass,.wear .lens{position:relative;width:42%;max-width:none;height:auto;aspect-ratio:auto;margin:0;border-radius:42% 42% 36% 36%;border:9px solid #16181b;box-shadow:0 0 0 2px #8b929a,inset 0 0 0 1px #000;background:linear-gradient(165deg,rgba(255,255,255,.14),rgba(8,14,18,.05) 34%,rgba(0,0,0,.2));overflow:hidden}
+.wear .lens,.wear .lens[data-severity="CAUTION"],.wear .lens[data-severity="HIGH"],.wear .lens[data-severity="CLOSED"]{background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.42))}
+.wear .lens:before{display:none}
+.bridge{position:relative;z-index:2;width:18px;height:8px;margin-top:18%;flex:0 0 18px;background:#16181b;border-radius:0 0 8px 8px;box-shadow:0 0 0 2px #8b929a}
+.scene-note{position:absolute;left:16px;right:16px;bottom:10px;margin:0;text-align:center;color:#f7fbff;font-size:12px;font-weight:700;letter-spacing:0;text-shadow:0 1px 2px #000;z-index:4}
+.wear .hud{padding:8% 9% 6%;background:radial-gradient(ellipse at 50% 46%,rgba(0,0,0,.62),rgba(0,0,0,.28) 62%,transparent 100%)}
+.wear .status-orbit{width:36px;margin-bottom:2px}
+.wear .orbit-core{font-size:18px}
+.wear .hud-tag{font-size:11px;margin-bottom:2px;letter-spacing:0}
+.wear .hud h1{font-size:15px;line-height:1.3;letter-spacing:0;margin-bottom:4px;text-shadow:0 1px 2px #000;word-break:keep-all;text-wrap:wrap}
+.wear #hud-message{font-size:11px;line-height:1.35;text-shadow:0 1px 2px #000}
+.wear .hud-top{font-size:9px;letter-spacing:0;gap:4px}
+.wear .hud-top,.wear .hud-status-row{display:none}
+.wear .hud-center,.wear .hud h1,.wear #hud-message,.wear .hud-tag,.wear .status-orbit{flex-shrink:0}
+.wear #hud-title,.wear #hud-message{display:block;-webkit-line-clamp:unset;overflow:hidden}
+.wear #hud-title{max-height:2.7em}
+.wear #hud-message{max-height:4.4em}
+.wear .hud h1{min-height:1.3em}
+.wear .hud-brand{max-width:46%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wear .hud-connection{font-size:0}
+.wear .hud-connection:before{width:7px;height:7px}
+.wear .hud-status-row,.wear .hud-warning{font-size:10px;text-shadow:0 1px 2px #000}
+.wear .hud-warning{margin-top:4px}
+.wear .hud-bar{margin-top:6px}
+/* Real Meta Ray-Ban Display Web App canvas: 600x600, black means transparent on additive display. */
+@media (max-width:640px) and (max-height:640px){html,body{background:#000;overflow:hidden;width:100%;height:100%;max-height:100dvh}.workspace{display:block;padding:0;min-height:0;width:100%;height:100dvh;max-height:100dvh;background:#000;overflow:hidden}.viewer{width:100%;height:100%;max-height:100dvh}.preview-label,.preview-footer,.controls,.world,.left-glass,.bridge,.scene-note{display:none!important}.wear{background:#000;aspect-ratio:auto;height:100%;border-radius:0;box-shadow:none}.wear:before,.wear:after{display:none}.pair{position:static;inset:auto;display:block;height:100%}.lens{width:min(100vw,100dvh);height:min(100vw,100dvh);max-width:600px;max-height:600px;aspect-ratio:1;margin:0 auto;border:none;border-radius:0;box-shadow:none;background:#000!important;overflow:hidden}.lens:before{display:none}.hud{padding:5% 8% 5%;overflow:hidden;background:transparent}.hud-top{font-size:11px;letter-spacing:.2px}.status-orbit{width:64px;margin-bottom:8px}.orbit-core{font-size:30px}.hud h1{font-size:26px;margin-bottom:8px}.hud-tag{font-size:13px;margin-bottom:6px}#hud-message{font-size:15px}.hud-cues li{font-size:13px}.hud-status-row{font-size:11px}.hud-warning{font-size:10px;margin-top:8px}.hud-bar{margin-top:8px}.wear .hud-top,.wear .hud-status-row{display:flex}.wear .hud-connection{font-size:11px}.wear .lens{width:min(100vw,100dvh);height:min(100vw,100dvh);max-width:600px;max-height:600px;aspect-ratio:1;margin:0 auto;border:none;border-radius:0;box-shadow:none;background:#000!important}.wear .hud{background:transparent;padding:5% 8% 5%}.wear .status-orbit{width:64px;margin-bottom:8px}.wear .orbit-core{font-size:30px}.wear .hud h1{font-size:26px;margin-bottom:8px;letter-spacing:-1.3px}.wear .hud-tag{font-size:13px;margin-bottom:6px}.wear #hud-message{font-size:15px;max-height:none}.wear #hud-title{max-height:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}

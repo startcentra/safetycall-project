@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko" data-i18n-title="live.pageTitle">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"/>
+  <meta name="theme-color" content="#000000"/>
+  <meta name="color-scheme" content="dark"/>
+  <title>SAFETYED</title>
+  <link rel="stylesheet" href="/glasses.css"/>
+  <script type="module" src="/glasses.js"></script>
+</head>
+<body>
+<main class="workspace">
+  <div class="viewer">
+    <div class="wear" id="wear" data-place="street">
+      <div class="world" aria-hidden="true">
+        <img class="world-far" src="/glasses-street-far.jpg" alt="">
+        <img class="world-near" src="/glasses-bank-near.jpg" alt="">
+      </div>
+      <div class="pair">
+        <div class="glass left-glass" aria-hidden="true"></div>
+        <div class="bridge" aria-hidden="true"></div>
+        <section class="lens" id="lens" data-severity="LOW" data-i18n-aria="g.lens" aria-label="SAFETYED 안경 화면">
+      <div class="hud" role="status" aria-live="polite" aria-atomic="true">
+        <div class="hud-top"><span class="hud-brand"><span class="sigil">◈</span> SAFETYED</span><span id="hud-connection" class="hud-connection" data-i18n="g.conn.WAIT">연결 대기</span></div>
+        <div class="hud-center">
+          <div class="status-orbit"><span class="orbit-core" id="orbit-core">✓</span></div>
+          <p class="hud-tag" id="hud-tag" data-i18n="g.tagCheck">보호 상태 확인</p>
+          <h1 id="hud-title" data-i18n="g.waitTitle">안경 연결 대기</h1>
+          <p id="hud-message" data-i18n="g.waitCopy">휴대폰 SAFETYED에서 안경을 열면 같은 안내가 여기에 나타납니다.</p>
+          <ul id="hud-cues" class="hud-cues" hidden></ul>
+        </div>
+        <div class="hud-bottom">
+          <div class="hud-status-row"><span id="hud-risk" data-i18n="geo.wait">대기</span><span id="hud-meta" data-i18n="meta.brand">SAFETYED</span></div>
+          <div class="hud-bar" aria-hidden="true"><span id="hud-bar-fill"></span></div>
+          <p class="hud-warning" id="hud-disclaimer"></p>
+        </div>
+      </div>
+    </section>
+      </div>
+      <p class="scene-note" id="scene-note" data-i18n="g.scene.street">가상 거리입니다. 실제 장소나 은행이 아닙니다.</p>
+    </div>
+  </div>
+  <aside class="controls" data-i18n-aria="g.aside" aria-label="안경 연결 상태">
+    <div class="eyebrow">SAFETYED</div>
+    <h2><span data-i18n="g.controlsA">눈앞의</span><br/><em data-i18n="g.controlsB">보호 안내</em></h2>
+    <p class="controls-intro" data-i18n="g.intro">통화 중 위험 신호가 보이면 휴대폰과 같은 안내가 안경에 나타납니다.</p>
+    <div class="status-card"><span data-i18n="g.link">연결</span><strong id="side-connect" data-i18n="geo.wait">대기</strong></div>
+    <div class="status-card"><span data-i18n="g.case">사건</span><strong id="side-run" data-i18n="g.none">없음</strong></div>
+    <div class="status-card"><span data-i18n="g.progress">진행</span><strong id="side-version">—</strong></div>
+    <div class="status-card"><span data-i18n="g.analysis">분석</span><strong id="side-provider" data-i18n="g.before">연결 전</strong></div>
+    <button type="button" id="retry" data-i18n="g.retry">다시 연결</button>
+  </aside>
+</main>
+</body>
+</html>
