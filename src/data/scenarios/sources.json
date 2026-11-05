@@ -1,0 +1,79 @@
+[
+  {
+    "sourceId": "FSC-2026-10",
+    "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱·스미싱 등 피해에 주의하세요",
+    "publisher": "금융위원회",
+    "publishedAt": "2026-10-06",
+    "url": "https://www.fsc.go.kr/no010101/87882",
+    "sourceType": "OFFICIAL_GUIDANCE",
+    "caseType": "맞춤형 대출사칭·선입금·앱 설치",
+    "verifiedAt": "2026-10-27",
+    "usageNote": "공식 경보에 제시된 수법을 추상화한 자체 창작 대화; 원문 재현 아님"
+  },
+  {
+    "sourceId": "FBI-ATO-2025",
+    "title": "Account Takeover Fraud via Impersonation of Financial Institution Support",
+    "publisher": "FBI",
+    "publishedAt": "2025-11-25",
+    "url": "https://www.fbi.gov/investigate/cyber/alerts/2025/account-takeover-fraud-via-impersonation-of-financial-institution-support",
+    "sourceType": "OFFICIAL_GUIDANCE",
+    "caseType": "금융기관 지원팀 사칭·인증정보 유도",
+    "verifiedAt": "2026-10-27",
+    "usageNote": "공식 경보 수법 요약 기반 자체 창작 대화"
+  },
+  {
+    "sourceId": "FBI-KIDNAP-2025",
+    "title": "Criminals Using Altered Proof-of-Life Media to Extort Victims in Virtual Kidnapping for Ransom Scams",
+    "publisher": "FBI",
+    "publishedAt": "2025-12-05",
+    "url": "https://www.fbi.gov/investigate/cyber/alerts/2025/criminals-using-altered-proof-of-life-media-to-extort-victims-in-virtual-kidnapping-for-ransom-scams",
+    "sourceType": "OFFICIAL_GUIDANCE",
+    "caseType": "조작된 증거물로 납치 협박",
+    "verifiedAt": "2026-10-27",
+    "usageNote": "미국 사례에 나온 수법에 착안한 한국어 합성 상황; 실제 위해 가능성 배제 금지"
+  },
+  {
+    "sourceId": "FTC-FAMILY-2023",
+    "title": "Scammers use AI to enhance their family emergency schemes",
+    "publisher": "FTC",
+    "publishedAt": null,
+    "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes",
+    "sourceType": "OFFICIAL_GUIDANCE",
+    "caseType": "가족 긴급상황·AI 음성 사칭",
+    "verifiedAt": "2026-10-27",
+    "usageNote": "가족 사칭 패턴을 바탕으로 새로 작성한 예시; 실제 목소리 수집 없음"
+  },
+  {
+    "sourceId": "FTC-EMERGENCY",
+    "title": "Scammers Use Fake Emergencies To Steal Your Money",
+    "publisher": "FTC",
+    "publishedAt": null,
+    "url": "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money",
+    "sourceType": "OFFICIAL_GUIDANCE",
+    "caseType": "가족·지인 긴급 송금",
+    "verifiedAt": "2026-10-27",
+    "usageNote": "사칭과 비밀 유지 압박을 추상화한 합성 발화"
+  },
+  {
+    "sourceId": "FBI-TECH",
+    "title": "Tech Support Scams",
+    "publisher": "FBI",
+    "publishedAt": null,
+    "url": "https://www.fbi.gov/how-we-can-help-you/common-frauds-and-scams/tech-support-scams",
+    "sourceType": "OFFICIAL_GUIDANCE",
+    "caseType": "기술지원 사칭·원격제어",
+    "verifiedAt": "2026-10-27",
+    "usageNote": "지속 갱신될 수 있는 안내 페이지 기반 수법 추상화"
+  },
+  {
+    "sourceId": "ACL-EMNLP-2025",
+    "title": "Detecting Continuously Evolving Scam Calls under Limited Annotation: A LLM-Augmented Expert Rule Framework",
+    "publisher": "ACL Anthology",
+    "publishedAt": "2025-11",
+    "url": "https://aclanthology.org/2025.findings-emnlp.270/",
+    "sourceType": "RESEARCH_PAPER",
+    "caseType": "새로운 사기 서사의 변형과 정상성 검토",
+    "verifiedAt": "2026-10-27",
+    "usageNote": "연구 방법론 근거; 실제 통화나 대사 인용 아님"
+  }
+]
